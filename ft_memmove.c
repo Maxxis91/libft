@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:07:00 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 21:53:51 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/11 18:24:46 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	s = src;
 	d = dst;
-	ft_setdir(((size_t)d > (size_t)s && (size_t)s + len > (size_t)d), &m, &n);
-	s += ((len - 1) * n);
-	d += ((len - 1) * n);
-	while (len > 0)
+	if (s != d)
 	{
-		*d = *s;
-		s += m;
-		d += m;
-		len--;
+		ft_setdir((d > s && (size_t)s + len > (size_t)d), &m, &n);
+		s += ((len - 1) * n);
+		d += ((len - 1) * n);
+		while (len > 0)
+		{
+			*d = *s;
+			s += m;
+			d += m;
+			len--;
+		}
 	}
 	return (dst);
 }
