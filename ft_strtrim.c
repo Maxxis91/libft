@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 18:10:35 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/14 19:09:02 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/14 19:17:47 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1)
 	{
 		m = 0;
-		n = 0;
+		n = ft_strlen(s1);
 		if (set)
 		{
 			while (ft_strchr(set, *(s1 + m)) && m <= ft_strlen(s1))
-			{
-					m++;
-			}
-			while (ft_strchr(set, *(s1 + ft_strlen(s1) - n - 1)) && n < ft_strlen(s1))
-			{
-					n++;
-			}
+				m++;
+			while (ft_strchr(set, *(s1 + n - 1)) && n > 0)
+				n--;
 		}
-		if (m + n > ft_strlen(s1))
+		if (m > n)
 		{
 			res = (char *)malloc(1);
 			if (!res)
@@ -42,10 +38,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		else
 		{
-			res = (char *)malloc(ft_strlen(s1) - m - n + 1);
+			res = (char *)malloc(n - m + 1);
 			if (!res)
 				return (NULL);
-			(void)ft_strlcpy(res, s1 + m, ft_strlen(s1) - m - n + 1);
+			(void)ft_strlcpy(res, s1 + m, n - m + 1);
 		}
 		return (res);
 	}
