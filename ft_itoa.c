@@ -6,13 +6,13 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:02:10 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/17 20:15:52 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/17 20:37:39 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_numlen(int n)
+static size_t	ft_numlen(int n)
 {
 	size_t	res;
 
