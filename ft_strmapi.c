@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 19:22:28 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/17 21:19:54 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/17 22:31:33 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!res)
 		return (NULL);
 	*(res + len) = '\0';
-	while (--len)
+	while (len)
+	{
 		*(res + len) = f(len, *(s + len));
+		len--;
+	}
 	*(res + len) = f(len, *(s + len));
 	return (res);
 }
