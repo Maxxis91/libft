@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 18:10:35 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/14 19:24:03 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/17 21:50:19 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	n = ft_strlen(s1);
 	if (set)
 	{
-		while (ft_strchr(set, *(s1 + m)) && m <= ft_strlen(s1))
+		while (ft_strchr(set, *(s1 + m)) && m < ft_strlen(s1))
 			m++;
 		while (ft_strchr(set, *(s1 + n - 1)) && n > 0)
 			n--;
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = (char *)malloc(n - m + 1);
 	if (!res)
 		return (NULL);
-	if (m - n)
+	if (n - m)
 		(void)ft_strlcpy(res, s1 + m, n - m + 1);
 	else
 		*res = '\0';
