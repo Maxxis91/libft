@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:08:22 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 21:52:58 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/18 20:07:01 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*r;
+	char	*r;
 
-	r = s;
-	while (*r)
-		r++;
-	while (r >= s)
+	r = NULL;
+	while (*s)
 	{
-		if (*r == (char)c)
-			return ((char *)r);
-		r--;
+		if (*s == (char)c)
+			r = (char *)s;
+		s++;
 	}
-	return (NULL);
+	if (*s == (char)c)
+		r = (char *)s;
+	return (r);
 }
