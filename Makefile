@@ -6,11 +6,11 @@
 #    By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 20:19:54 by gmelissi          #+#    #+#              #
-#    Updated: 2021/10/17 20:16:40 by gmelissi         ###   ########.fr        #
+#    Updated: 2021/10/18 20:41:28 by gmelissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean bonus re
 
 CC = gcc
 PATH_SRC = ./
@@ -37,5 +37,9 @@ clean:
 
 fclean: clean
 		rm -f $(NAME)
-			
+
+bonus: $(OBJS)
+		ar rc $(NAME) $(OBJS)
+		ranlib $(NAME)	
+
 re: fclean all
