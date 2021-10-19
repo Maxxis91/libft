@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:04:04 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 17:04:16 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/19 17:17:07 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*r;
+	char	*r;
 
 	r = s;
 	while (n > 0)
 	{
-		*r = '\0';
+		*r = 0;
 		r++;
 		n--;
 	}
