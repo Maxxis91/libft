@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:01:17 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/11 18:21:12 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:48:28 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ int	ft_atoi(const char *src)
 	while (*s && ft_isspace(*s))
 		s++;
 	if (*s && (*s == '+' || *s == '-'))
-	{
-		if (*s == '-')
+		if (*s++ == '-')
 			neg = 1;
-		s++;
-	}
 	while (*s && ft_isdigit(*s) && res < (unsigned long)LONG_MAX + 1)
 		res = res * 10 + *s++ - 48;
 	if ((neg && res > (unsigned long)LONG_MAX + 1) \

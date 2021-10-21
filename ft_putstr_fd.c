@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:26:23 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/18 19:28:08 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 21:28:13 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (!s || fd < 0)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

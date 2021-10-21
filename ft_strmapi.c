@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 19:22:28 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/18 18:20:01 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 21:19:29 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	res = (char *)malloc(len + 1);
+	res = (char *)malloc(++len);
 	if (!res)
 		return (NULL);
-	*(res + len) = '\0';
+	*(res + --len) = '\0';
 	if (len)
 		len--;
 	while (len)

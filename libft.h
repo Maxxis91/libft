@@ -6,16 +6,19 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:09:01 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/19 17:21:36 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 19:39:42 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
+//# include <stddef.h>
 # include <stdlib.h>
-# include <limits.h>
+//# include <limits.h>
 # include <unistd.h>
+
+# define INT_MIN -2147483648
+# define LONG_MAX 9223372036854775807
 
 typedef struct s_list
 {

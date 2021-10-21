@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 19:17:02 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/12 18:50:00 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 19:41:58 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;
+	size_t	cnt_max;
 
+	cnt_max = SIZE_MAX / size;
+	if (count > cnt_max)
+		return (NULL);
 	size *= count;
 	res = malloc(size);
 	if (!res)

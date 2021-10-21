@@ -6,11 +6,9 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:05:02 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 17:05:06 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 19:47:09 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isupper(int c)
 {

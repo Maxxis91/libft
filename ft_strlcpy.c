@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:56:04 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/10 17:10:53 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:21:56 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	d = dst;
 	if (dstsize > 0)
 	{	
-		while (*s && dstsize > 1)
+		while (*s && dstsize-- > 1)
 		{
 			*d = *s;
 			s++;
 			d++;
-			dstsize--;
 		}
 		*d = '\0';
 	}

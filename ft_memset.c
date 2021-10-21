@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:07:13 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/10 20:48:25 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 19:54:23 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 		r = b;
 		while (len > 0)
 		{
-			*r = (unsigned char)c;
-			r++;
+			*r++ = (unsigned char)c;
 			len--;
 		}
 	}

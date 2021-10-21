@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:36:35 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/18 19:43:36 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 21:35:17 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
+	if (fd < 0)
+		return ;
 	if (n == INT_MIN)
 		write(fd, "-2147483648", 11);
 	else

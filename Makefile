@@ -6,7 +6,7 @@
 #    By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 20:19:54 by gmelissi          #+#    #+#              #
-#    Updated: 2021/10/19 19:11:29 by gmelissi         ###   ########.fr        #
+#    Updated: 2021/10/20 20:12:27 by gmelissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,14 @@ $(NAME): $(OBJS)
 		ar rc $(NAME) $(OBJS)
 		ranlib $(NAME)
 
-bonus: $(OBJS) $(BOBJS)
-		ar rc $(NAME) $(OBJS) $(BOBJS)
-		ranlib $(NAME)	
+bonus:
+		@make OBJS=$(BOBJS) all
+		ar rc $(NAME) $(BOBJS)
+		ranlib $(NAME)
+
+#bonus: $(OBJS) $(BOBJS)
+#		ar rc $(NAME) $(OBJS) $(BOBJS)
+#		ranlib $(NAME)  
 
 clean: 
 		rm -f $(OBJS) ${BOBJS}

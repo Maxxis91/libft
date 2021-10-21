@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 19:57:41 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/17 16:00:59 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 21:04:05 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,8 @@ static size_t	ft_wordlen(char const *s, char c)
 	len = 0;
 	while (*s == c)
 		s++;
-	while (*s && *s != c)
-	{
+	while (*s && *s++ != c)
 		len++;
-		s++;
-	}
 	return (len);
 }
 
@@ -51,8 +48,7 @@ static char	**ft_free_2d(char **ar)
 	while (ar[i])
 	{
 		free(ar[i]);
-		ar[i] = NULL;
-		i++;
+		ar[i++] = NULL;
 	}
 	free(ar);
 	ar = NULL;

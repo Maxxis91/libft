@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:04:36 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 17:04:39 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/20 16:50:20 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

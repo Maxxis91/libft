@@ -6,11 +6,9 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:05:52 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/09 17:05:54 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 19:48:06 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

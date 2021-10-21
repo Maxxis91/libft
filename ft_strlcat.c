@@ -6,7 +6,7 @@
 /*   By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 18:02:00 by gmelissi          #+#    #+#             */
-/*   Updated: 2021/10/10 19:11:45 by gmelissi         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:44:32 by gmelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len = d - dst;
 	if (dstsize > 0)
 	{
-		while (*s && dstsize > 1)
+		while (*s && dstsize-- > 1)
 		{
 			*d = *s;
 			s++;
 			d++;
-			dstsize--;
 		}
 		*d = '\0';
 	}
