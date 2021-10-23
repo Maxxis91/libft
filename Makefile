@@ -6,7 +6,7 @@
 #    By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 20:19:54 by gmelissi          #+#    #+#              #
-#    Updated: 2021/10/23 20:56:50 by gmelissi         ###   ########.fr        #
+#    Updated: 2021/10/23 21:09:39 by gmelissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $?
 
-%.o: %.c
+%.o: %.c $(HEADS)
 		${CC} ${FLAGS} -c $< -o $@
 
 bonus:
