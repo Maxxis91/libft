@@ -6,11 +6,11 @@
 #    By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 20:19:54 by gmelissi          #+#    #+#              #
-#    Updated: 2021/10/23 21:09:39 by gmelissi         ###   ########.fr        #
+#    Updated: 2021/10/26 16:03:43 by gmelissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 FLAGS = -Wall -Wextra -Werror -I$(HEADS)
 PATH_HEAD = ./
 HEAD = libft.h
@@ -28,19 +28,22 @@ NAME = libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME):	$(OBJS)
 		ar rcs $(NAME) $?
 
-%.o: %.c $(HEADS)
+%.o:		%.c $(HEADS)
 		${CC} ${FLAGS} -c $< -o $@
 
 bonus:
 		@make OBJS="$(BOBJS)" all
 
+Tbonus:		$(BOBJS)
+		ar rcs $(NAME) $?
+
 clean: 
 		@rm -f $(OBJS) ${BOBJS}
 
-fclean: clean
+fclean: 	clean
 		@rm -f $(NAME)
 
 re: fclean all
