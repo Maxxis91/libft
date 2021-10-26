@@ -6,7 +6,7 @@
 #    By: gmelissi <gmelissi@student.21-schoo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 20:19:54 by gmelissi          #+#    #+#              #
-#    Updated: 2021/10/26 16:03:43 by gmelissi         ###   ########.fr        #
+#    Updated: 2021/10/26 16:10:40 by gmelissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ $(NAME):	$(OBJS)
 bonus:
 		@make OBJS="$(BOBJS)" all
 
-Tbonus:		$(BOBJS)
-		ar rcs $(NAME) $?
+#Tbonus:		$(BOBJS)
+#		ar rcs $(NAME) $?
 
 clean: 
 		@rm -f $(OBJS) ${BOBJS}
